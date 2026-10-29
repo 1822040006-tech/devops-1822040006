@@ -1,7 +1,7 @@
 const button = document.getElementById("versionButton");
 const message = document.getElementById("message");
 
-button.addEventListener("click", () => {
-    const now = new Date().toLocaleString("vi-VN");
-    message.textContent = `Phiên bản 2.0 - Cập nhật lúc: ${now}`;
-});
+document.getElementById("versionButton").onclick = () => {
+    const time = new Date().toLocaleTimeString("vi-VN");
+    document.getElementById("message").textContent = `Phiên bản 2.0 - Cập nhật lúc: ${time}`;
+};
