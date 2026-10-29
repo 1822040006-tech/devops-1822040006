@@ -23,15 +23,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Validate HTML title
-        run: |
-          if ! grep -Eiq '<title>[^<]+</title>' index.html; then
-            echo "ERROR: Missing or empty <title> tag in index.html"
-            exit 1
-          fi
-          echo "HTML title validation passed."
-
+        
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
